@@ -1,10 +1,5 @@
 #!/bin/bash
 
-if [ "${POSTGRES_DATABASE}" = "" ]; then
-  echo "You need to set the POSTGRES_DATABASE environment variable."
-  exit 1
-fi
-
 if [ "${POSTGRES_HOST}" = "" ]; then
   if [ -n "${POSTGRES_PORT_5432_TCP_ADDR}" ]; then
     POSTGRES_HOST=$POSTGRES_PORT_5432_TCP_ADDR
